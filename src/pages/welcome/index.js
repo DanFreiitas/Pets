@@ -17,7 +17,6 @@ export default function Welcome() {
                     source={require('../../assets/img/icon/icon.gif')}
                     style={{ width: '100%' }}
                     resizeMode='contain'
-
                 />
             </View>
 

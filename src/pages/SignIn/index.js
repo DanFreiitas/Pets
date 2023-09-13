@@ -22,7 +22,7 @@ export default function SignIn() {
                 <Text style={styles.title}>Senha</Text>
                 <TextInput secureTextEntry={true} value={password} onChangeText={setPassword} placeholder="Password" style={styles.input}></TextInput>
 
-                <TouchableOpacity style={styles.button} onPress={()=>navigation.navigate('PetLove')}>
+                <TouchableOpacity style={styles.button} onPress={()=>navigation.navigate('PetWalker')}>
                     <Text style={styles.buttonText}>Entrar</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={()=>navigation.navigate('SignUp')} style={styles.buttonRegistre}>

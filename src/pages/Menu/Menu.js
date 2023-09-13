@@ -14,7 +14,7 @@ export default function Menu (){
                 <TouchableOpacity style={styles.containerButtonMenu} onPress={()=>navigation.navigate('MyAcount')}>
                     <Icon name="user" size={30} color="#fff" />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.containerButtonMenu}>
+                <TouchableOpacity style={styles.containerButtonMenu} onPress={()=>navigation.navigate('Historico')}>
                     <Icon name="list" size={30} color="#fff" />
                 </TouchableOpacity>
             </View>

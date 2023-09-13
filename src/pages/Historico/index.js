@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, FlatList, ScrollView } from 'react-native';
-
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Menu from '../Menu/Menu';
-
+import React from "react";
+import { View, StyleSheet, Text, TouchableOpacity, FlatList } from "react-native";
 import * as Animatable from 'react-native-animatable';
+import Icon from 'react-native-vector-icons/FontAwesome'
 
+import Menu from "../Menu/Menu";
 
-export default function PetLove() {
-
-
+export default function Historico() {
     const data = [
         { id: '1', title: 'Item 1' },
         { id: '2', title: 'Item 2' },
@@ -22,11 +18,11 @@ export default function PetLove() {
     return (
         <View style={styles.container}>
             <Animatable.View style={styles.containerHeader} delay={600} animation={'fadeInLeft'}>
-                <Text style={styles.message}>Passeios</Text>
+                <Text style={styles.message}>Histórico</Text>
             </Animatable.View>
 
-            <Animatable.View style={styles.containerPasseios} animation={'fadeInUp'}>
-                <FlatList
+            <Animatable.View style={styles.containerHistorico} animation={'fadeInRight'}>
+            <FlatList
                     style={styles.title}
                     data={data}
                     keyExtractor={item => item.id}
@@ -39,11 +35,13 @@ export default function PetLove() {
                     )}
                 />
             </Animatable.View>
-            <Menu />
+            <Menu/>
         </View>
+
     )
 }
-export const styles = StyleSheet.create({
+
+const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#38a69d',
@@ -58,7 +56,7 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#fff'
     },
-    containerPasseios: {
+    containerHistorico: {
         backgroundColor: '#fff',
         flex: 10,
         borderTopLeftRadius: 25,
@@ -80,4 +78,5 @@ export const styles = StyleSheet.create({
         paddingBottom: "3%",
         paddingStart: "5%"
     },
+      
 });
